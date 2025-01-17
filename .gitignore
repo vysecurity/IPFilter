@@ -1,0 +1,11 @@
+# Output files
+output.txt
+fortinet.txt
+
+# MaxMind GeoIP Database
+GeoLite2-City.mmdb
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class 
