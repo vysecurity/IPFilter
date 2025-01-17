@@ -1,1 +1,2 @@
-geoip2==4.8.0 
+geoip2==4.8.0
+ipwhois==1.2.0 
