@@ -40,7 +40,6 @@ def get_ip_info(ip, reader):
             'latitude': None,
             'longitude': None
         }
-
 def extract_ip(line):
     # Regular expression for matching IPv4 addresses
     ip_pattern = r'(?:\d{1,3}\.){3}\d{1,3}'
