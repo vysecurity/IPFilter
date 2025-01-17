@@ -19,6 +19,7 @@ from urllib.parse import urlparse
 import geoip2.database
 import os
 import sys
+from live_map import serve_map
 
 def get_asn_info(ip, asn_reader):
     try:
@@ -103,10 +104,11 @@ def main():
     parser = argparse.ArgumentParser(description='Extract and filter IP addresses from a file.')
     parser.add_argument('-i', '--input', required=True, help='Input file path')
     parser.add_argument('-o', '--output', required=True, help='Output file path')
-    parser.add_argument('-f', '--filter', help='Filter by country code (e.g., hk for Hong Kong)')
+    parser.add_argument('-f', '--filter', help='Filter by country code(s) (e.g., hk for Hong Kong, or sg,hk for multiple)')
     parser.add_argument('-c', '--csv', action='store_true', help='Output as CSV with location information')
     parser.add_argument('-a', '--asn', action='store_true', help='Include ASN information')
     parser.add_argument('-s', '--split', action='store_true', help='Split output into separate files by country code')
+    parser.add_argument('--live', action='store_true', help='Show live visualization in web browser')
     
     args = parser.parse_args()
 
@@ -118,7 +120,8 @@ def main():
         print("Error: GeoLite2-City database not found. Please download it from MaxMind and place it in the same directory.")
         sys.exit(1)
 
-    if args.asn and not os.path.exists(asn_db_path):
+    # Always check for ASN database if using live visualization
+    if (args.asn or args.live) and not os.path.exists(asn_db_path):
         print("Error: GeoLite2-ASN database not found. Please download it from MaxMind and place it in the same directory.")
         sys.exit(1)
 
@@ -128,7 +131,8 @@ def main():
     try:
         # Initialize GeoIP2 readers
         city_reader = geoip2.database.Reader(city_db_path)
-        asn_reader = geoip2.database.Reader(asn_db_path) if args.asn else None
+        # Always initialize ASN reader for live visualization
+        asn_reader = geoip2.database.Reader(asn_db_path) if (args.asn or args.live) else None
 
         # Read and process input file
         with open(args.input, 'r') as infile:
@@ -139,12 +143,20 @@ def main():
 
         # Process IPs with geolocation
         for ip in sorted(unique_ips):
-            ip_info = get_ip_info(ip, city_reader, asn_reader, args.asn)
+            ip_info = get_ip_info(ip, city_reader, asn_reader, args.asn or args.live)
             ip_info_list.append(ip_info)
 
         # Filter by country code if specified
         if args.filter:
-            ip_info_list = [info for info in ip_info_list if info['country_code'] == args.filter.lower()]
+            # Split filter into list of country codes
+            country_codes = [code.strip().lower() for code in args.filter.split(',')]
+            ip_info_list = [info for info in ip_info_list if info['country_code'] in country_codes]
+
+        # Launch live visualization if requested
+        if args.live:
+            print("Launching live visualization in your web browser...")
+            serve_map(ip_info_list)
+            return
 
         # Write output
         if args.split:

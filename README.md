@@ -16,6 +16,7 @@ A Python tool for processing and filtering IP addresses from various formats, wi
 - Country-based filtering
 - CSV output option with detailed location information
 - Ability to split output by country into separate files
+- Interactive map visualization with heat maps and statistics
 
 ## Installation
 
@@ -54,9 +55,13 @@ http://1.1.1.1:8080
 python3 ipfilter.py -i input.txt -o output.txt
 ```
 
-2. Filter IPs from a specific country (e.g., Hong Kong):
+2. Filter IPs by country (supports single or multiple countries):
 ```bash
+# Single country (Hong Kong)
 python3 ipfilter.py -i input.txt -o output.txt -f hk
+
+# Multiple countries (Singapore and Hong Kong)
+python3 ipfilter.py -i input.txt -o output.txt -f sg,hk
 ```
 
 3. Get detailed location information in CSV format:
@@ -132,25 +137,39 @@ Split output with `-s` flag creates separate files for each country:
 - `output_au.txt` (Australian IPs)
 - `output_us.txt` (US IPs)
 
+### Real-World Examples
+
+2. Visualize IPs on an interactive threat map:
+```bash
+python3 ipfilter.py -i fortinet.txt -o output.txt --live
+```
+
+This will:
+- Launch an interactive map in your default web browser
+- Show IP concentrations as heat maps
+- Display detailed statistics
+- Show IP counts directly on the map
+- Provide clickable markers with IP and ASN information
+- Use a cybersecurity-themed dark interface
+
+The visualization includes:
+- Heat map overlay showing IP density
+- Circle markers sized by IP count with count labels
+- Popup details for each location
+- Color-coded intensity based on IP concentration
+- Real-time statistics panel
+- Dark theme optimized for security operations
+
 ## Arguments
 
 - `-i, --input`: Input file path (required)
 - `-o, --output`: Output file path (required)
-- `-f, --filter`: Filter by country code (e.g., hk for Hong Kong)
+- `-f, --filter`: Filter by country code(s) (e.g., `hk` for Hong Kong, or `sg,hk` for multiple)
 - `-c, --csv`: Output as CSV with location information
 - `-a, --asn`: Include ASN information in the output
 - `-s, --split`: Split output into separate files by country code
+- `--live`: Show interactive visualization in web browser
 
 ## CSV Output Format
 
-When using the `-c` flag, the output CSV includes:
-- IP address
-- Country code
-- Country name
-- City
-- Latitude
-- Longitude
-
-When adding `-a` flag:
-- ASN (Autonomous System Number)
-- ASN Description
+When using the `-c`
