@@ -170,33 +170,39 @@ The visualization includes:
 - `-s, --split`: Split output into separate files by country code
 - `--live`: Show interactive visualization in web browser
 
-### Output Format Examples
+### Output Format
 
-The output format varies based on the flags used:
+The tool always outputs in CSV format. The columns included depend on the flags used:
 
 Basic output (no flags):
-```
+```csv
+ip
 1.1.1.1
 8.8.8.8
 ```
 
-With country information (`-c` flag):
-```
-1.1.1.1 (Country: Australia)
-8.8.8.8 (Country: United States)
+With country information (`-c` or `--country` flag):
+```csv
+ip,country_code,country_name,city,latitude,longitude
+1.1.1.1,au,Australia,Research,-37.7,145.1833
+8.8.8.8,us,United States,Mountain View,37.386,-122.0838
 ```
 
 With ASN information (`-a` flag):
-```
-1.1.1.1 (ASN: 13335 - Cloudflare, Inc.)
-8.8.8.8 (ASN: 15169 - Google LLC)
+```csv
+ip,asn,asn_description
+1.1.1.1,13335,Cloudflare Inc
+8.8.8.8,15169,Google LLC
 ```
 
-With both country and ASN (`-c -a` flags):
+With both country and ASN (`--country -a` flags):
+```csv
+ip,country_code,country_name,city,latitude,longitude,asn,asn_description
+1.1.1.1,au,Australia,Research,-37.7,145.1833,13335,Cloudflare Inc
+8.8.8.8,us,United States,Mountain View,37.386,-122.0838,15169,Google LLC
 ```
-1.1.1.1 (Country: Australia, ASN: 13335 - Cloudflare, Inc.)
-8.8.8.8 (Country: United States, ASN: 15169 - Google LLC)
-```
+
+When using the `-s` flag, separate CSV files will be created for each country using the format `output_[country_code].csv`.
 
 ## Licensing
 

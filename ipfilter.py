@@ -169,24 +169,66 @@ def main():
             # Write separate files for each country
             output_base = os.path.splitext(args.output)[0]
             for country_code, country_ips in country_groups.items():
-                output_file = f"{output_base}_{country_code}.txt"
+                output_file = f"{output_base}_{country_code}.csv"
                 with open(output_file, 'w', newline='') as outfile:
+                    # Prepare fieldnames based on included information
+                    fieldnames = ['ip']
+                    if args.country:
+                        fieldnames.extend(['country_code', 'country_name', 'city', 'latitude', 'longitude'])
+                    if args.asn:
+                        fieldnames.extend(['asn', 'asn_description'])
+                    
+                    writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+                    writer.writeheader()
+                    
+                    # Write only selected fields
                     for info in country_ips:
-                        output_line = info['ip']
+                        row = {'ip': info['ip']}
                         if args.country:
-                            output_line += f" (Country: {info['country_name']})"
+                            row.update({
+                                'country_code': info['country_code'],
+                                'country_name': info['country_name'],
+                                'city': info['city'],
+                                'latitude': info['latitude'],
+                                'longitude': info['longitude']
+                            })
                         if args.asn:
-                            output_line += f" (ASN: {info['asn']} - {info['asn_description']})"
-                        outfile.write(f"{output_line}\n")
+                            row.update({
+                                'asn': info['asn'],
+                                'asn_description': info['asn_description']
+                            })
+                        writer.writerow(row)
+            print(f"Successfully processed {len(ip_info_list)} IP addresses into {len(country_groups)} country-specific CSV files.")
         else:
             with open(args.output, 'w', newline='') as outfile:
+                # Prepare fieldnames based on included information
+                fieldnames = ['ip']
+                if args.country:
+                    fieldnames.extend(['country_code', 'country_name', 'city', 'latitude', 'longitude'])
+                if args.asn:
+                    fieldnames.extend(['asn', 'asn_description'])
+                
+                writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+                writer.writeheader()
+                
+                # Write only selected fields
                 for info in ip_info_list:
-                    output_line = info['ip']
+                    row = {'ip': info['ip']}
                     if args.country:
-                        output_line += f" (Country: {info['country_name']})"
+                        row.update({
+                            'country_code': info['country_code'],
+                            'country_name': info['country_name'],
+                            'city': info['city'],
+                            'latitude': info['latitude'],
+                            'longitude': info['longitude']
+                        })
                     if args.asn:
-                        output_line += f" (ASN: {info['asn']} - {info['asn_description']})"
-                    outfile.write(f"{output_line}\n")
+                        row.update({
+                            'asn': info['asn'],
+                            'asn_description': info['asn_description']
+                        })
+                    writer.writerow(row)
+            print(f"Successfully processed {len(ip_info_list)} IP addresses.")
 
         city_reader.close()
         if asn_reader:
