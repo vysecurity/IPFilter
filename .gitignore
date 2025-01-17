@@ -9,3 +9,5 @@ GeoLite2-City.mmdb
 __pycache__/
 *.py[cod]
 *$py.class 
+
+.DS_Store
