@@ -105,7 +105,7 @@ def main():
     parser.add_argument('-i', '--input', required=True, help='Input file path')
     parser.add_argument('-o', '--output', required=True, help='Output file path')
     parser.add_argument('-f', '--filter', help='Filter by country code(s) (e.g., hk for Hong Kong, or sg,hk for multiple)')
-    parser.add_argument('-c', '--csv', action='store_true', help='Output as CSV with location information')
+    parser.add_argument('-c', '--country', action='store_true', help='Include country information in output')
     parser.add_argument('-a', '--asn', action='store_true', help='Include ASN information')
     parser.add_argument('-s', '--split', action='store_true', help='Split output into separate files by country code')
     parser.add_argument('--live', action='store_true', help='Show live visualization in web browser')
@@ -120,8 +120,7 @@ def main():
         print("Error: GeoLite2-City database not found. Please download it from MaxMind and place it in the same directory.")
         sys.exit(1)
 
-    # Always check for ASN database if using live visualization
-    if (args.asn or args.live) and not os.path.exists(asn_db_path):
+    if args.asn and not os.path.exists(asn_db_path):
         print("Error: GeoLite2-ASN database not found. Please download it from MaxMind and place it in the same directory.")
         sys.exit(1)
 
@@ -131,8 +130,7 @@ def main():
     try:
         # Initialize GeoIP2 readers
         city_reader = geoip2.database.Reader(city_db_path)
-        # Always initialize ASN reader for live visualization
-        asn_reader = geoip2.database.Reader(asn_db_path) if (args.asn or args.live) else None
+        asn_reader = geoip2.database.Reader(asn_db_path) if args.asn else None
 
         # Read and process input file
         with open(args.input, 'r') as infile:
@@ -173,36 +171,22 @@ def main():
             for country_code, country_ips in country_groups.items():
                 output_file = f"{output_base}_{country_code}.txt"
                 with open(output_file, 'w', newline='') as outfile:
-                    if args.csv:
-                        fieldnames = ['ip', 'country_code', 'country_name', 'city', 'latitude', 'longitude']
+                    for info in country_ips:
+                        output_line = info['ip']
+                        if args.country:
+                            output_line += f" (Country: {info['country_name']})"
                         if args.asn:
-                            fieldnames.extend(['asn', 'asn_description'])
-                        writer = csv.DictWriter(outfile, fieldnames=fieldnames)
-                        writer.writeheader()
-                        writer.writerows(country_ips)
-                    else:
-                        for info in country_ips:
-                            if args.asn:
-                                outfile.write(f"{info['ip']} (ASN: {info['asn']} - {info['asn_description']})\n")
-                            else:
-                                outfile.write(f"{info['ip']}\n")
-            print(f"Successfully processed {len(ip_info_list)} IP addresses into {len(country_groups)} country-specific files.")
+                            output_line += f" (ASN: {info['asn']} - {info['asn_description']})"
+                        outfile.write(f"{output_line}\n")
         else:
             with open(args.output, 'w', newline='') as outfile:
-                if args.csv:
-                    fieldnames = ['ip', 'country_code', 'country_name', 'city', 'latitude', 'longitude']
+                for info in ip_info_list:
+                    output_line = info['ip']
+                    if args.country:
+                        output_line += f" (Country: {info['country_name']})"
                     if args.asn:
-                        fieldnames.extend(['asn', 'asn_description'])
-                    writer = csv.DictWriter(outfile, fieldnames=fieldnames)
-                    writer.writeheader()
-                    writer.writerows(ip_info_list)
-                else:
-                    for info in ip_info_list:
-                        if args.asn:
-                            outfile.write(f"{info['ip']} (ASN: {info['asn']} - {info['asn_description']})\n")
-                        else:
-                            outfile.write(f"{info['ip']}\n")
-            print(f"Successfully processed {len(ip_info_list)} IP addresses.")
+                        output_line += f" (ASN: {info['asn']} - {info['asn_description']})"
+                    outfile.write(f"{output_line}\n")
 
         city_reader.close()
         if asn_reader:
