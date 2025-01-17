@@ -165,14 +165,38 @@ The visualization includes:
 - `-i, --input`: Input file path (required)
 - `-o, --output`: Output file path (required)
 - `-f, --filter`: Filter by country code(s) (e.g., `hk` for Hong Kong, or `sg,hk` for multiple)
-- `-c, --csv`: Output as CSV with location information
+- `-c, --country`: Include country information in the output
 - `-a, --asn`: Include ASN information in the output
 - `-s, --split`: Split output into separate files by country code
 - `--live`: Show interactive visualization in web browser
 
-## CSV Output Format
+### Output Format Examples
 
-When using the `-c`
+The output format varies based on the flags used:
+
+Basic output (no flags):
+```
+1.1.1.1
+8.8.8.8
+```
+
+With country information (`-c` flag):
+```
+1.1.1.1 (Country: Australia)
+8.8.8.8 (Country: United States)
+```
+
+With ASN information (`-a` flag):
+```
+1.1.1.1 (ASN: 13335 - Cloudflare, Inc.)
+8.8.8.8 (ASN: 15169 - Google LLC)
+```
+
+With both country and ASN (`-c -a` flags):
+```
+1.1.1.1 (Country: Australia, ASN: 13335 - Cloudflare, Inc.)
+8.8.8.8 (Country: United States, ASN: 15169 - Google LLC)
+```
 
 ## Licensing
 
