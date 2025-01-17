@@ -1,0 +1,152 @@
+ip,country_code,country_name,city,latitude,longitude
+101.78.142.226,hk,Hong Kong,Unknown,22.2578,114.1657
+101.78.201.94,hk,Hong Kong,Ho Man Tin,22.3162,114.1842
+101.78.208.90,hk,Hong Kong,Unknown,22.2578,114.1657
+103.17.73.154,hk,Hong Kong,Wan Chai,22.2848,114.1703
+103.247.141.30,hk,Hong Kong,Unknown,22.2578,114.1657
+103.253.239.186,hk,Hong Kong,Unknown,22.2578,114.1657
+103.253.250.10,hk,Hong Kong,Unknown,22.2578,114.1657
+103.6.142.74,hk,Hong Kong,Unknown,22.2578,114.1657
+112.118.218.85,hk,Hong Kong,Unknown,22.2578,114.1657
+112.120.102.217,hk,Hong Kong,Unknown,22.2578,114.1657
+112.120.42.118,hk,Hong Kong,Unknown,22.2578,114.1657
+112.120.45.164,hk,Hong Kong,Unknown,22.2578,114.1657
+113.212.225.242,hk,Hong Kong,Unknown,22.2578,114.1657
+113.212.240.2,hk,Hong Kong,Unknown,22.2578,114.1657
+115.160.136.202,hk,Hong Kong,Unknown,22.2578,114.1657
+115.160.138.226,hk,Hong Kong,Unknown,22.2578,114.1657
+115.160.160.74,hk,Hong Kong,Unknown,22.2578,114.1657
+116.92.232.174,hk,Hong Kong,Unknown,22.2578,114.1657
+118.140.111.182,hk,Hong Kong,Unknown,22.2578,114.1657
+118.140.22.114,hk,Hong Kong,Unknown,22.2578,114.1657
+118.140.36.74,hk,Hong Kong,Unknown,22.2578,114.1657
+118.140.67.54,hk,Hong Kong,Unknown,22.2578,114.1657
+118.140.78.66,hk,Hong Kong,Unknown,22.2578,114.1657
+118.140.94.83,hk,Hong Kong,Unknown,22.2578,114.1657
+118.140.94.88,hk,Hong Kong,Unknown,22.2578,114.1657
+118.143.211.170,hk,Hong Kong,Unknown,22.2578,114.1657
+118.143.211.171,hk,Hong Kong,Unknown,22.2578,114.1657
+118.143.86.135,hk,Hong Kong,Unknown,22.2578,114.1657
+123.1.149.131,hk,Hong Kong,Wan Chai,22.2848,114.1703
+123.1.233.163,hk,Hong Kong,Unknown,22.2578,114.1657
+123.1.250.156,hk,Hong Kong,Unknown,22.2578,114.1657
+123.1.253.61,hk,Hong Kong,Unknown,22.2578,114.1657
+125.215.136.108,hk,Hong Kong,Unknown,22.2578,114.1657
+125.215.242.129,hk,Hong Kong,To Kwa Wan,22.3163,114.1842
+129.227.156.119,hk,Hong Kong,Hong Kong,22.2842,114.1759
+138.19.247.122,hk,Hong Kong,Unknown,22.2578,114.1657
+14.136.104.146,hk,Hong Kong,Unknown,22.2578,114.1657
+14.136.69.1,hk,Hong Kong,San Po Kong,22.3361,114.1999
+14.136.8.250,hk,Hong Kong,Unknown,22.2578,114.1657
+155.137.165.161,hk,Hong Kong,North Point,22.285,114.1953
+175.45.29.190,hk,Hong Kong,Unknown,22.2578,114.1657
+183.178.157.242,hk,Hong Kong,Yau Ma Tei,22.3151,114.1743
+183.178.167.17,hk,Hong Kong,Unknown,22.2578,114.1657
+183.178.171.74,hk,Hong Kong,Unknown,22.2578,114.1657
+183.178.171.75,hk,Hong Kong,Unknown,22.2578,114.1657
+183.178.182.93,hk,Hong Kong,Unknown,22.2578,114.1657
+183.178.23.18,hk,Hong Kong,Unknown,22.2578,114.1657
+183.178.35.129,hk,Hong Kong,Unknown,22.2578,114.1657
+183.178.46.66,hk,Hong Kong,Unknown,22.2578,114.1657
+183.178.46.68,hk,Hong Kong,Unknown,22.2578,114.1657
+183.178.46.70,hk,Hong Kong,Unknown,22.2578,114.1657
+183.178.46.72,hk,Hong Kong,Unknown,22.2578,114.1657
+183.178.46.73,hk,Hong Kong,Unknown,22.2578,114.1657
+202.126.214.138,hk,Hong Kong,Unknown,22.2578,114.1657
+202.126.222.14,hk,Hong Kong,Unknown,22.2578,114.1657
+202.127.78.82,hk,Hong Kong,Unknown,22.2578,114.1657
+202.155.242.18,hk,Hong Kong,Unknown,22.2578,114.1657
+202.155.253.226,hk,Hong Kong,Unknown,22.2578,114.1657
+202.181.213.59,hk,Hong Kong,Unknown,22.2578,114.1657
+202.64.193.118,hk,Hong Kong,Unknown,22.2578,114.1657
+202.69.68.26,hk,Hong Kong,Unknown,22.2578,114.1657
+202.69.71.241,hk,Hong Kong,Unknown,22.2578,114.1657
+202.69.73.114,hk,Hong Kong,Sham Shui Po,22.3361,114.1698
+202.77.29.210,hk,Hong Kong,Unknown,22.2578,114.1657
+202.82.174.25,hk,Hong Kong,Unknown,22.2578,114.1657
+202.82.217.41,hk,Hong Kong,Kowloon Bay,22.3327,114.2116
+202.83.244.98,hk,Hong Kong,Unknown,22.2578,114.1657
+203.166.221.166,hk,Hong Kong,Unknown,22.2578,114.1657
+203.169.47.69,hk,Hong Kong,Unknown,22.2578,114.1657
+203.174.35.30,hk,Hong Kong,Prince Edward,22.3163,114.1842
+203.186.13.238,hk,Hong Kong,Unknown,22.2578,114.1657
+203.186.8.246,hk,Hong Kong,Unknown,22.2578,114.1657
+203.198.113.202,hk,Hong Kong,Sha Tin Wai,22.3847,114.1965
+203.198.136.8,hk,Hong Kong,Unknown,22.2578,114.1657
+203.198.195.145,hk,Hong Kong,Unknown,22.2578,114.1657
+210.0.181.82,hk,Hong Kong,Unknown,22.2578,114.1657
+210.177.196.73,hk,Hong Kong,Unknown,22.2578,114.1657
+210.3.12.42,hk,Hong Kong,Unknown,22.2578,114.1657
+210.3.150.82,hk,Hong Kong,Unknown,22.2578,114.1657
+210.3.209.118,hk,Hong Kong,Unknown,22.2578,114.1657
+210.3.214.34,hk,Hong Kong,Unknown,22.2578,114.1657
+218.188.194.190,hk,Hong Kong,Unknown,22.2578,114.1657
+218.188.49.250,hk,Hong Kong,Unknown,22.2578,114.1657
+218.188.49.99,hk,Hong Kong,Unknown,22.2578,114.1657
+218.188.50.186,hk,Hong Kong,Unknown,22.2578,114.1657
+218.188.51.238,hk,Hong Kong,Unknown,22.2578,114.1657
+218.189.77.254,hk,Hong Kong,Sai Kung,22.3807,114.2742
+218.250.161.187,hk,Hong Kong,Unknown,22.2578,114.1657
+218.253.134.106,hk,Hong Kong,Unknown,22.2578,114.1657
+218.253.134.114,hk,Hong Kong,Unknown,22.2578,114.1657
+218.253.252.102,hk,Hong Kong,Unknown,22.2578,114.1657
+218.253.90.230,hk,Hong Kong,Unknown,22.2578,114.1657
+218.255.184.206,hk,Hong Kong,Hong Kong,22.2842,114.1759
+218.255.25.158,hk,Hong Kong,Unknown,22.2578,114.1657
+218.255.91.130,hk,Hong Kong,Unknown,22.2578,114.1657
+219.76.162.30,hk,Hong Kong,Unknown,22.2578,114.1657
+220.246.75.221,hk,Hong Kong,Unknown,22.2578,114.1657
+223.17.196.159,hk,Hong Kong,Unknown,22.2578,114.1657
+223.17.215.81,hk,Hong Kong,Unknown,22.2578,114.1657
+223.197.174.249,hk,Hong Kong,Unknown,22.2578,114.1657
+223.197.177.19,hk,Hong Kong,Unknown,22.2578,114.1657
+223.197.184.33,hk,Hong Kong,Unknown,22.2578,114.1657
+223.197.70.193,hk,Hong Kong,Unknown,22.2578,114.1657
+223.255.166.246,hk,Hong Kong,Kowloon City,22.3356,114.1847
+223.255.177.179,hk,Hong Kong,Unknown,22.2578,114.1657
+42.200.103.199,hk,Hong Kong,Unknown,22.2578,114.1657
+42.200.111.239,hk,Hong Kong,Unknown,22.2578,114.1657
+42.200.135.194,hk,Hong Kong,Unknown,22.2578,114.1657
+42.200.135.241,hk,Hong Kong,Unknown,22.2578,114.1657
+42.200.157.190,hk,Hong Kong,Unknown,22.2578,114.1657
+42.200.163.214,hk,Hong Kong,Unknown,22.2578,114.1657
+42.200.164.65,hk,Hong Kong,Unknown,22.2578,114.1657
+42.200.198.140,hk,Hong Kong,Unknown,22.2578,114.1657
+42.200.201.166,hk,Hong Kong,Unknown,22.2578,114.1657
+42.200.231.150,hk,Hong Kong,Unknown,22.2578,114.1657
+42.200.64.154,hk,Hong Kong,Unknown,22.2578,114.1657
+42.3.231.217,hk,Hong Kong,Unknown,22.2578,114.1657
+42.98.61.186,hk,Hong Kong,Unknown,22.2578,114.1657
+43.224.5.223,hk,Hong Kong,Unknown,22.2578,114.1657
+43.250.62.188,hk,Hong Kong,Unknown,22.2578,114.1657
+45.125.115.51,hk,Hong Kong,Tsz Wan Shan,22.3531,114.2027
+45.125.115.6,hk,Hong Kong,Tsz Wan Shan,22.3531,114.2027
+45.251.104.136,hk,Hong Kong,Unknown,22.2578,114.1657
+58.177.181.75,hk,Hong Kong,Tai Kok Tsui,22.3157,114.159
+58.177.189.214,hk,Hong Kong,Unknown,22.2578,114.1657
+59.148.172.238,hk,Hong Kong,Unknown,22.2578,114.1657
+59.148.68.26,hk,Hong Kong,Unknown,22.2578,114.1657
+59.152.250.170,hk,Hong Kong,Tai Kok Tsui,22.3157,114.159
+59.188.29.244,hk,Hong Kong,Unknown,22.2578,114.1657
+61.238.240.78,hk,Hong Kong,Unknown,22.2578,114.1657
+61.239.253.178,hk,Hong Kong,Unknown,22.2578,114.1657
+61.244.144.154,hk,Hong Kong,Unknown,22.2578,114.1657
+61.244.164.211,hk,Hong Kong,North Point,22.285,114.1953
+61.244.240.210,hk,Hong Kong,Unknown,22.2578,114.1657
+61.244.85.230,hk,Hong Kong,Wong Tai Sin,22.35,114.1833
+61.244.93.89,hk,Hong Kong,Unknown,22.2578,114.1657
+61.92.18.214,hk,Hong Kong,Unknown,22.2578,114.1657
+61.92.255.102,hk,Hong Kong,Unknown,22.2578,114.1657
+61.92.61.106,hk,Hong Kong,Unknown,22.2578,114.1657
+61.93.14.86,hk,Hong Kong,Unknown,22.2578,114.1657
+61.93.167.60,hk,Hong Kong,Unknown,22.2578,114.1657
+61.93.208.82,hk,Hong Kong,Kowloon City,22.3356,114.1847
+63.217.17.82,hk,Hong Kong,Hong Kong,22.2842,114.1759
+72.255.228.232,hk,Hong Kong,Unknown,22.2578,114.1657
+72.255.231.244,hk,Hong Kong,Unknown,22.2578,114.1657
+72.255.237.121,hk,Hong Kong,Unknown,22.2578,114.1657
+72.255.244.31,hk,Hong Kong,Unknown,22.2578,114.1657
+72.255.254.130,hk,Hong Kong,Unknown,22.2578,114.1657
+72.255.254.133,hk,Hong Kong,Unknown,22.2578,114.1657
+8.210.17.17,hk,Hong Kong,Hong Kong,22.2842,114.1759
+94.190.212.125,hk,Hong Kong,Unknown,22.2578,114.1657
